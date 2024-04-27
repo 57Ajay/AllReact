@@ -40,6 +40,8 @@ The source code for this application is organized within the `src` directory. He
   - May include conditional rendering based on user authentication status.
 - **Usage:** This component is used within the `App` component to present user-related information.
 
+- **style file:** `UserProfile.module.css`
+
 ### `Box` Component
 
 - **File:** `Box.jsx`
@@ -48,6 +50,7 @@ The source code for this application is organized within the `src` directory. He
   - Renders a colored box with customizable dimensions and styles.
   - May accept props to customize the color or other visual aspects of the box.
 - **Usage:** This component can be reused across the application to display colored boxes as needed.
+- **style file:** `Box.css`
 
 ### `UserFavoriteMovies` Component
 
@@ -56,6 +59,21 @@ The source code for this application is organized within the `src` directory. He
 - **Responsibilities:**
   - Renders a movies list with inside Box component with its customized styles.
   - **style file:** `UserFavoriteMovies.module.scss`
+
+### `LoginForm` Component
+- **File:** `LoginForm.jsx`
+- **Description:** The `LoginForm` component is a form component that asks for UserName and Password.
+- **Responsibilities:**
+  - notes Username and Password
+  - **style file:** `LoginForm.css`
+
+### `DisplaySize` Component
+- **File:** `DisplaySize.jsx`
+- **Description:** The `DisplaySize` component is a form component that Shows Current window size.
+- **Responsibilities:**
+  - renders DisplaySize (width and height) with its customized styles.
+  - **style file:** `DisplaySize.css`
+
 
 ### Additional Resources
 
