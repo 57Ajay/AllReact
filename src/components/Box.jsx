@@ -1,10 +1,15 @@
 import './Box.css'
-const Box = ()=>{
+import PropTypes from 'prop-types';
+const Box = ({children})=>{
     return(
         <div className="box">
-            <h1>Rectangular Box</h1>  
+            {children}  
         </div>
     );
+};
+
+Box.propTypes = {
+    children: PropTypes.node.isRequired,
 };
 
 export default Box; 
