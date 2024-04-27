@@ -12,7 +12,6 @@ const UserProfile = (props)=>{
             <br/>
             <b>Login: </b>
             <span>{props.login ? "Yes" : "No"}</span>
-            {console.log(props)}
             <br />
             <label>
                 <b>Email: </b>

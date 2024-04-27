@@ -1,8 +1,8 @@
 import './Box.css'
 import PropTypes from 'prop-types';
-const Box = ({children, customClass})=>{
+const Box = ({children, className})=>{
     return(
-        <div className={customClass}>
+        <div className={className}>
             {children}  
         </div>
     );
@@ -10,7 +10,7 @@ const Box = ({children, customClass})=>{
 
 Box.propTypes = {
     children: PropTypes.node,
-    customClass: PropTypes.string.isRequired
+    className: PropTypes.string.isRequired
 };
 
 export default Box; 

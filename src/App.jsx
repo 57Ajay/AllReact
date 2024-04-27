@@ -10,11 +10,17 @@ const App =()=>{
     <Fragment>
       <UserProfile Username="Ajay" age={21} login={true} />
       <br />
-      <Box customClass="movie-box">
+      <Box className="movie-box">
         <UserFavoriteMovies />
       </Box>
-      <Box customClass="another-box">
+      <br />
+      <Box className="another-box">
         <h1>Another Box</h1>
+        <p>This is another box</p>
+        <button>Click me</button>
+        <Box className="another-box-inside-another-box">
+          <b>This is a box inside a box</b>
+        </Box>
       </Box>
     </Fragment>
   );
