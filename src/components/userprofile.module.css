@@ -1,0 +1,15 @@
+.userprofile {
+  background-color:black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #ccc;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  color: #ff4500;
+}
+

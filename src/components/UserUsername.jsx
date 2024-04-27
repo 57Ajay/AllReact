@@ -1,10 +1,14 @@
 import Proptypes from "prop-types";
+import { Fragment } from "react";
+import "./UserUsername.css";
+
 const UserUsername = ({name})=>{
     return(
-        <div id="user-username">
-            <b>Username: </b>
+        <Fragment>
+            <b className="Username">Username: </b>
             <span>{name}</span>
-        </div>
+            <br />
+        </Fragment>
     );
 };
 
