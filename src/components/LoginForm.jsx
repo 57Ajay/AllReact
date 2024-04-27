@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-
+import './LoginForm.css'
 const LoginForm = ()=>{
     return(
         <Fragment>
@@ -25,7 +25,7 @@ const LoginForm = ()=>{
                     UserName: 
                     <input id="UserName" className="UserName" type="text" placeholder="Username"
                     onChange={(e)=>{
-                        // console.log(e.target.value);
+                        console.log(e.target.value);
                         
                     }} name="UserName" />
                 </label>
@@ -34,7 +34,7 @@ const LoginForm = ()=>{
                     Password: 
                     <input className="Password" id="Password" type="password" placeholder="Password"
                     onChange={(e)=>{
-                        // console.log(e.target.value);
+                        console.log(e.target.value);
                     }} name="Password"/>
                 </label><br /><br />
                 <button type="submit">Login</button>

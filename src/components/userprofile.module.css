@@ -11,6 +11,10 @@
   margin-right: auto;
   padding: 10px;
   color: #ff4500;
-};
+  transition: all 0.3s ease-in-out;
+}
 
-
+.userprofile:hover {
+  width: 60vw;
+  height: 350px;
+}
