@@ -49,6 +49,14 @@ The source code for this application is organized within the `src` directory. He
   - May accept props to customize the color or other visual aspects of the box.
 - **Usage:** This component can be reused across the application to display colored boxes as needed.
 
+### `UserFavoriteMovies` Component
+
+- **File:** `UserFavoriteMovies.jsx`
+- **Description:** The `UserFavoriteMovies` component is a simple component that displays a Unordered List of movies.
+- **Responsibilities:**
+  - Renders a movies list with inside Box component with its customized styles.
+  - **style file:** `UserFavoriteMovies.module.scss`
+
 ### Additional Resources
 
 For further learning and reference, consider exploring the following resources:

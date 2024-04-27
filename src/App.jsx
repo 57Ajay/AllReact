@@ -9,8 +9,12 @@ const App =()=>{
   return(
     <Fragment>
       <UserProfile Username="Ajay" age={21} login={true} />
-      <Box>
+      <br />
+      <Box customClass="movie-box">
         <UserFavoriteMovies />
+      </Box>
+      <Box customClass="another-box">
+        <h1>Another Box</h1>
       </Box>
     </Fragment>
   );
