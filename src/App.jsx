@@ -4,9 +4,11 @@ import './App.css';
 import Box from "./components/Box";
 import UserFavoriteMovies from "./components/UserFavoriteMovies";
 import LoginForm from "./components/LoginForm";
+import DisplaySize from "./components/DisplaySize";
 
 
 const App =()=>{
+  
   return(
     <Fragment>
       <UserProfile Username="Ajay" age={21} login={true} />
@@ -22,7 +24,10 @@ const App =()=>{
         <Box className="another-box-inside-another-box">
           <LoginForm />
         </Box>
+        <h3>Display Size (W x H): </h3>
+        <DisplaySize />
       </Box>
+      
     </Fragment>
   );
 };

@@ -47,8 +47,8 @@
 }
 .another-box:hover{
     /* transform: rotate(-5deg); */
-    width: 100vw;
-    height: 600px;
+    width: 85vw;
+    height: 800px;
 }
 .another-box button {
     background-color: #002353;
