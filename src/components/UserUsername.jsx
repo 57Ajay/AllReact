@@ -7,6 +7,7 @@ const UserUsername = ({name})=>{
         </div>
     );
 };
+
 UserUsername.propTypes = {
     name: Proptypes.string.isRequired
 };
