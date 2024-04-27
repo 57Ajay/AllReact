@@ -62,8 +62,8 @@
     margin-right: auto;
     padding: 10px;
     color: #ff4500;
-    justify-content: center;
+    /* justify-content: center;
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; */
 }

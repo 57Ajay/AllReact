@@ -3,6 +3,7 @@ import UserProfile from "./components/UserProfile";
 import './App.css';
 import Box from "./components/Box";
 import UserFavoriteMovies from "./components/UserFavoriteMovies";
+import LoginForm from "./components/LoginForm";
 
 
 const App =()=>{
@@ -19,7 +20,7 @@ const App =()=>{
         <p>This is another box</p>
         <button>Click me</button>
         <Box className="another-box-inside-another-box">
-          <b>This is a box inside a box</b>
+          <LoginForm />
         </Box>
       </Box>
     </Fragment>
