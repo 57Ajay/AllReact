@@ -5,6 +5,7 @@ import Box from "./components/Box";
 import UserFavoriteMovies from "./components/UserFavoriteMovies";
 import LoginForm from "./components/LoginForm";
 import DisplaySize from "./components/DisplaySize";
+import RegisterForm from "./components/RegisterForm";
 
 
 const App =()=>{
@@ -26,6 +27,9 @@ const App =()=>{
         </Box>
         <h3>Display Size (W x H): </h3>
         <DisplaySize />
+      </Box>
+      <Box className="register-box">
+        <RegisterForm />
       </Box>
       
     </Fragment>

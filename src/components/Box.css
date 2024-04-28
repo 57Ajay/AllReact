@@ -88,3 +88,48 @@
     width: 45vw;
     height: 250px;
 }
+
+.register-box{
+    background-color:#000000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #070709;
+    border: 1px solid #ccc;
+    font-size: larger;
+    padding: 15px;
+    margin: 15px;
+    width: 40vw;
+    height: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    color: #f40101;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.1s ease-in-out;
+}
+
+.register-box .RegisterButton{
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.register-box:hover{
+    width: 50vw;
+    height: 300px;
+}
+
+.register-box .RegisterInput{
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-weight: bold;
+}
