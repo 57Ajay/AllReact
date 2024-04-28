@@ -16,5 +16,24 @@
 
 .userprofile:hover {
   width: 60vw;
-  height: 60vw;
+  height: 30vw;
+}
+
+
+
+input {
+  width: 50%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #f50202;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
 }
