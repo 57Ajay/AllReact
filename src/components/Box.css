@@ -16,11 +16,11 @@
     display: flex;
     flex-direction: column;
     transform: rotate(0deg);
-    transition: all 0.6s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .movie-box:hover{
-    transform: rotate(1deg);
+    /* transform: rotate(1deg); */
     width: 70vw;
     height: 390px;
 }
@@ -63,7 +63,7 @@
   
 .another-box button:hover {
     background-color: #003373;
-    transform: rotate(5deg);
+    /* transform: rotate(5deg); */
 }
   
 .another-box-inside-another-box{
@@ -80,11 +80,11 @@
     padding: 10px;
     color: #ff4500;
     transform: rotate(0deg);
-    transition: all 0.6s ease-in-out;
+    transition: all 0.10s ease-in-out;
 }
 
 .another-box-inside-another-box:hover{
-    transform: rotate(0.5deg);
+    /* transform: rotate(0.5deg); */
     width: 45vw;
     height: 250px;
 }

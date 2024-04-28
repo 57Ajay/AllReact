@@ -19,8 +19,8 @@ const App =()=>{
       </Box>
       <br />
       <Box className="another-box">
-        <h1>Another Box</h1>
-        <p>This is another box</p>
+        <h1>Big Box</h1>
+        <p>This is Biggest box</p>
         <button>Click me</button>
         <Box className="another-box-inside-another-box">
           <LoginForm />
