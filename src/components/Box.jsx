@@ -5,7 +5,7 @@ const Box = ({children, className})=>{
         <div className={className}>
             {children}  
         </div>
-    );// AJay
+    );
 };
 
 Box.propTypes = {

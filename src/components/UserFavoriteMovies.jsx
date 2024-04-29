@@ -16,6 +16,7 @@ const UserFavoriteMovies = ()=>{
 
 
     const addMovie = (e) => {
+        e.preventDefault();
         const dupleMovie = favoriteMovies.some(movie => e.target.elements.movie.value.toLowerCase() === movie.toLowerCase());
         if(dupleMovie || e.target.elements.movie.value === "") return (alert("Movie already exists"));
         else{
