@@ -10,52 +10,32 @@ const RegisterForm = ()=>{
     const disabled = formData.UserName.length === 0 || formData.Password.length === 0 || formData.displayName.length === 0;
 
 
-    const userSet = (e)=>{
-        const value = e.target.value;
-        setFormData({
-        UserName: value,
-        Password: formData.Password,
-        displayName: formData.displayName,
-        });
+    const handleChange = (e)=>{
+        const {name, value} = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }))
     };
-
-    const passSet = (e)=>{
-        const value = e.target.value;
-        setFormData({
-        UserName: formData.UserName,
-        Password: value,
-        displayName: formData.displayName,
-        });
-    };
-
-    const displaySet = (e)=>{
-        const value = e.target.value;
-        setFormData({
-        UserName: formData.UserName,
-        Password: formData.Password,
-        displayName: value,
-        });
-    };
-
     return(
         <Fragment>
             <form>
                 <label htmlFor="RegisterUserName">
                     UserName: 
                     <input id="RegisterUserName" className="RegisterInput" type="text" autoComplete="register-password" placeholder="Username"
-                    name="UserName" value={formData.UserName} onChange={userSet} maxLength={11} />
+                    name="UserName" value={formData.UserName} onChange={handleChange} maxLength={11} />
                 </label><br />
 
                 <label htmlFor="RegisterPassword">
                     Password: 
                     <input className="RegisterInput" id="RegisterPassword" type="password" autoComplete="register-password" placeholder="Password"
-                    name="Password" value={formData.Password} onChange={passSet} maxLength={17} />
+                    name="Password" value={formData.Password} onChange={handleChange} maxLength={17} />
                 </label><br />
 
-                <label htmlFor="RegisterPassword">
+                <label htmlFor="RegisterDisplayName">
                     DisplayName: 
                     <input className="RegisterInput" id="RegisterDisplayName" type="text" autoComplete="register-DisplayName" placeholder="DisplayName"
-                    name="DisplayName" value={formData.displayName} onChange={displaySet} maxLength={11} />
+                    name="displayName" value={formData.displayName} onChange={handleChange} maxLength={11} />
                 </label><br />
                 <div>
                     UserName: {formData.UserName}<br />
