@@ -6,12 +6,14 @@ import UserFavoriteMovies from "./components/UserFavoriteMovies";
 import LoginForm from "./components/LoginForm";
 import DisplaySize from "./components/DisplaySize";
 import RegisterForm from "./components/RegisterForm";
+import UserDetailsRenderer from "./components/UserDetailsRenderer";
 
 
 const App =()=>{
   
   return(
     <Fragment>
+      
       <UserProfile Username="Ajay" age={21} login={true} />
       <br />
       <Box className="movie-box">
@@ -31,7 +33,9 @@ const App =()=>{
       <Box className="register-box">
         <RegisterForm />
       </Box>
-      
+
+      <UserDetailsRenderer />
+
     </Fragment>
   );
 };
