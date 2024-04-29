@@ -1,6 +1,6 @@
 import UserUsername from "./UserUsername";
 import Proptypes from "prop-types";
-import userprofile from"./userprofile.module.css";
+import userprofile from"./Userprofile.module.css";
 const UserProfile = (props)=>{
     return (
         <div className={userprofile.userprofile} >

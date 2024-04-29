@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Fragment, useState } from "react";
 
-const UserDetails = ({ user, updateUser }) => {
+const UserDetails = ({ user, updateUser, deleteUser }) => {
     const [editing, setEditing] = useState(false);
     const [userName, setUserName] = useState(user.UserName);
     const [email, setEmail] = useState(user.email);
@@ -18,6 +18,7 @@ const UserDetails = ({ user, updateUser }) => {
 
     return (
         <Fragment>
+        
             <br />
             <b>ID: </b>
             <span>{user.id}</span>
@@ -52,7 +53,7 @@ const UserDetails = ({ user, updateUser }) => {
             ) : (
                 <button onClick={handleEditingChange}>Edit</button>
             )}
-            <button>Delete</button>
+            <button onClick={()=>{deleteUser(user.id)}}>Delete</button><br/>
         </Fragment>
     );
 };
@@ -64,6 +65,7 @@ UserDetails.propTypes = {
         email: PropTypes.string.isRequired,
     }),
     updateUser: PropTypes.func.isRequired,
+    deleteUser: PropTypes.func.isRequired,
 };
 
 export default UserDetails;

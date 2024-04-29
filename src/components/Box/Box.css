@@ -133,3 +133,41 @@
     border-radius: 5px;
     font-weight: bold;
 }
+
+
+.user-details{
+    background-color:rgb(28, 32, 24);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #070709;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+    width: 75vw;
+    height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    color: #dad008;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.1s ease-in-out;
+    
+}
+
+.user-details .user-details-main{
+    margin-bottom: 10px;
+    overflow-y: scroll;
+    display:block;
+    width: 75vw;
+}
+
+.user-details button{
+    margin: 5px;
+}
+
+.user-details:hover {
+    width: 80vw;
+    height: 800px;
+}
