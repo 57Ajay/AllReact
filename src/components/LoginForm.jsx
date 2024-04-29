@@ -23,7 +23,7 @@ const LoginForm = ()=>{
             }}>
                 <label htmlFor="UserName">
                     UserName: 
-                    <input id="UserName" className="UserName" type="text" placeholder="Username"
+                    <input id="UserName" className="UserName" type="text" autoComplete="username" placeholder="Username"
                     onChange={(e)=>{
                         console.log(e.target.value);
                         
@@ -32,7 +32,7 @@ const LoginForm = ()=>{
                 <br />
                 <label htmlFor="Password">
                     Password: 
-                    <input className="Password" id="Password" type="password" placeholder="Password"
+                    <input className="Password" id="Password" type="password" autoComplete="current-password" placeholder="Password"
                     onChange={(e)=>{
                         console.log(e.target.value);
                     }} name="Password"/>
