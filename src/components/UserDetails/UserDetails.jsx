@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Fragment, useState } from "react";
+import z from 'zod';
 
 const UserDetails = ({ user, updateUser, deleteUser }) => {
     const [editing, setEditing] = useState(false);
@@ -12,8 +13,16 @@ const UserDetails = ({ user, updateUser, deleteUser }) => {
 
     const handleSave = () => {
         // Save changes
-        updateUser(user.id, { UserName: userName, email: email });
-        handleEditingChange();
+        const userSchema = z.object({
+            UserName: z.string().min(1),
+            email: z.string().email(),
+        });
+        try{
+            updateUser(user.id, userSchema.parse({ UserName: userName, email: email }));
+            handleEditingChange();
+        }catch(err){
+            alert(err.errors[0].message);
+        }
     };
 
     return (
@@ -30,6 +39,7 @@ const UserDetails = ({ user, updateUser, deleteUser }) => {
                     id="UserNameDetails"
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)}
+                    maxLength={11}
                 />
             ) : (
                 <span>{user.UserName}</span>
@@ -43,6 +53,7 @@ const UserDetails = ({ user, updateUser, deleteUser }) => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     type="email"
+                    maxLength={17}
                 />
             ) : (
                 <span>{user.email}</span>

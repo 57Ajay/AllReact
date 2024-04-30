@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react";
 import UserDetails from "./UserDetails";
+import z from 'zod';
 
 const UserDetailsRenderer = () => {
     const [users, setUsers] = useState([
@@ -19,41 +20,53 @@ const UserDetailsRenderer = () => {
             email: "XWwJoG@example.com",
         },
     ]);
-    const [newUserName, setNewUserName] = useState("");
-    const [newUserEmail, setNewUserEmail] = useState("");
-  
+    // const [name, setName] = useState("");
+    // const [email, setEmail] = useState("");
+    // making it stateful and escaping redundancy.
+    const [nameMail, setNameMail] = useState({
+        name: "",
+        email: "",
+    });
 
     const updateUser = (userId, updatedData) => {
+       
         setUsers((prevUsers) =>
-            prevUsers.map((user) =>
-                user.id === userId ? { ...user, ...updatedData } : user
-            )
-        );
+                prevUsers.map((user) =>
+                    user.id === userId ? { ...user, ...updatedData } : user
+                )
+            );
     };
 
     const deleteUser = (userId) => {
         setUsers((prevUsers) => prevUsers.filter((user) => user.id !== userId));
     };
     const mailHandler = (e) => {
-        setNewUserEmail(e.target.value);
+        setNameMail({ ...nameMail, email: e.target.value });
     };
     const nameHandler = (e) => {
-        setNewUserName(e.target.value);
+        setNameMail({ ...nameMail, name: e.target.value });
     }
     const addUser = () => {
-        if (newUserName.trim() === "" || newUserEmail.trim() === "") {
-            alert("Please enter both username and email.");
-            return;
+        const userSchema = z.object({
+            name: z.string().min(1),
+            email: z.string().email(),
+        });
+        try {
+            userSchema.parse(nameMail);
+            const newId = new Date().getTime();
+            const newUser = {
+                id: newId,
+                UserName: nameMail.name,
+                email: nameMail.email,
+            };
+            setUsers((prevUsers) => [...prevUsers, newUser]);
+            setNameMail({
+                name: "",
+                email: "",
+            });
+        } catch (error) {
+            alert(error.errors[0].message);
         }
-        const newId = new Date().getTime();
-        const newUser = {
-            id: newId,
-            UserName: newUserName,
-            email: newUserEmail,
-        };
-        setUsers((prevUsers) => [...prevUsers, newUser]);
-        setNewUserName("");
-        setNewUserEmail("");
     };
 
 
@@ -70,7 +83,7 @@ const UserDetailsRenderer = () => {
                 <input
                     type="text"
                     placeholder="Enter UserName"
-                    value={newUserName}
+                    value={nameMail.name}
                     onChange={nameHandler}
                     maxLength={11}
                 /><br />
@@ -78,9 +91,9 @@ const UserDetailsRenderer = () => {
                 <input
                     type="email"
                     placeholder="Enter Email"
-                    value={newUserEmail}
+                    value={nameMail.email}
                     onChange={mailHandler}
-                    maxLength={13}
+                    maxLength={21}
                 /><br />
                 <button onClick={addUser}>Add User</button>
             </div>
