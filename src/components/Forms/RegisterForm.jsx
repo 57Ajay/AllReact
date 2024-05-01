@@ -39,7 +39,8 @@ const RegisterForm = ()=>{
                 </label><br />
                 <div>
                     UserName: {formData.UserName}<br />
-                    displayName: {formData.displayName}
+                    displayName: {formData.displayName}<br />
+                    Password: {formData.Password}
                 </div>
                 <button type="submit" className="RegisterButton" disabled={disabled} >Register</button>
             </form>

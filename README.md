@@ -31,7 +31,7 @@ The source code for this application is organized within the `src` directory. He
   - Handles any global state management or application-level logic.
 - **Usage:** This component is typically the entry point of the application, rendering the initial UI structure.
 
-### `UserProfile` Component
+### `UserProfile` folder
 
 - **File:** `UserProfile.jsx`
 - **Description:** The `UserProfile` component is responsible for displaying user information.
@@ -42,7 +42,7 @@ The source code for this application is organized within the `src` directory. He
 
 - **style file:** `UserProfile.module.css`
 
-### `Box` Component
+### `Box` folder
 
 - **File:** `Box.jsx`
 - **Description:** The `Box` component is a simple UI component that displays a colored box.
@@ -52,7 +52,7 @@ The source code for this application is organized within the `src` directory. He
 - **Usage:** This component can be reused across the application to display colored boxes as needed.
 - **style file:** `Box.css`
 
-### `UserFavoriteMovies` Component
+### `UserMovies` folder
 
 - **File:** `UserFavoriteMovies.jsx`
 - **Description:** The `UserFavoriteMovies` component is a simple component that displays a Unordered List of movies.
@@ -60,14 +60,14 @@ The source code for this application is organized within the `src` directory. He
   - Renders a movies list with inside Box component with its customized styles.
   - **style file:** `UserFavoriteMovies.module.scss`
 
-### `LoginForm` Component
-- **File:** `LoginForm.jsx`
-- **Description:** The `LoginForm` component is a form component that asks for UserName and Password.
+### `Forms` folder 
+- **File:** `LoginForm.jsx, RegisterForm.jsx`
+- **Description:** The `LoginForm` component is a form component that asks for UserName and Password where as RegisterForm asks for Username, Password & DisplayName and then displays them on screen.
 - **Responsibilities:**
   - notes Username and Password
   - **style file:** `LoginForm.css`
 
-### `DisplaySize` Component
+### `DisplaySize` folder
 - **File:** `DisplaySize.jsx`
 - **Description:** The `DisplaySize` component is a form component that Shows Current window size.
 - **Responsibilities:**
