@@ -191,6 +191,12 @@
     word-break: break-word;
 }
 
+.user-box:hover {
+    border: 2px solid #f80202;
+    background-color: #002353;
+}
+
+
 .user-box ul {
     margin: 0;
     padding: 0;
@@ -206,3 +212,21 @@
     color: #000000;
 }
 
+.image-box {
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.image-box:hover{
+    border: 2px solid #f80202;
+    background-color: #000000;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

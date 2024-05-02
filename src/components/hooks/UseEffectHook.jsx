@@ -15,7 +15,7 @@ const UseEffectHook = () => {
             try{
             const response = await fetch("https://jsonplaceholder.typicode.com/photos");
             const data = await response.json();
-            console.log(data);
+            
             // sort the array randomly
             data.sort(() => Math.random() - 0.5);
             // fetching only 50 images Randomly
