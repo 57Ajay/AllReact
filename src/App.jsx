@@ -7,14 +7,14 @@ import LoginForm from "./components/Forms/LoginForm";
 import DisplaySize from "./components/DisplaySize/DisplaySize";
 import RegisterForm from "./components/Forms/RegisterForm";
 import UserDetailsRenderer from "./components/UserDetails/UserDetailsRenderer";
-import HookuseEffect from "./components/hooks/HookuseEffect";
+import UseEffectHook from "./components/hooks/UseEffectHook";
 
 
 const App =()=>{
   
   return(
     <Fragment>
-      <HookuseEffect />
+      <UseEffectHook />
       <UserProfile Username="Ajay" age={21} login={true} />
       <br />
       <Box className="movie-box">
