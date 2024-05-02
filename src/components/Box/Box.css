@@ -171,3 +171,38 @@
     width: 80vw;
     height: 800px;
 }
+
+
+/* UseEffectHook styles */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 16px;
+}
+
+.user-box {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #3b3b3b;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.user-box ul {
+    margin: 0;
+    padding: 0;
+}
+
+.user-box li {
+    list-style: none;
+    margin: 8px 0;
+}
+.user-box li p {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #000000;
+}
+

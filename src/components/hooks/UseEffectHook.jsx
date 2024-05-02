@@ -1,24 +1,31 @@
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import Box from "../Box/Box";
+// import "./UseEffectHook.css";
 
-
-const  UseEffectHook =()=> {
+const UseEffectHook = () => {
     const [users, setUsers] = useState([]);
-    useEffect(()=>{
+
+    useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/users")
-        .then((response)=> response.json())
-        .then((data)=> setUsers(data))
+            .then((response) => response.json())
+            .then((data) => setUsers(data));
     }, []);
-  return (
-    <Fragment>
-        <ul>
-            {users.map((user)=>(
-                <p key={user.id}>
-                    <li>{user.name}</li>
-                </p>
+
+    return (
+        <Box className="container">
+            {users.map((user) => (
+                <div key={user.id} className="user-box">
+                    <ul>
+                        <li><p>Name:</p> {user.name}</li>
+                        <li><p>Username:</p> {user.username}</li>
+                        <li><p>Email:</p> {user.email}</li>
+                        <li><p>Contact:</p> {user.phone}</li>
+                        <li><p>Website:</p> {user.website}</li>
+                    </ul>
+                </div>
             ))}
-        </ul>
-    </Fragment>
-  );
+        </Box>
+    );
 };
 
 export default UseEffectHook;
