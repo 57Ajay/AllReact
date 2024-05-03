@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Box from "../Box/Box";
-// import "./UseEffectHook.css";
+
 
 const UseEffectHook = () => {
     const [users, setUsers] = useState([]);

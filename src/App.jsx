@@ -13,32 +13,28 @@ import UseEffectHook from "./components/hooks/UseEffectHook";
 const App =()=>{
   
   return(
-    <Fragment>
+    <Fragment> 
+      <DisplaySize /><br />
       <UseEffectHook />
       <UserProfile Username="Ajay" age={21} login={true} />
       <br />
-      <Box className="movie-box">
-        <UserFavoriteMovies />
-      </Box>
+      
       <br />
-      <Box className="another-box">
-        <h1>Big Box</h1>
-        <p>This is Biggest box</p>
-        <button>Click me</button>
-        <Box className="another-box-inside-another-box">
+      <Box className="container1">
+        <Box className="form-box">
           <LoginForm />
         </Box>
-        <h3>Display Size (W x H): </h3>
-        <DisplaySize />
-      </Box>
-      <Box className="register-box">
+        <Box className="movie-box">
+        <UserFavoriteMovies />
+        </Box>
+        <Box className="register-box">
         <RegisterForm />
+        </Box>
       </Box>
       <Box className="user-details">
         <UserDetailsRenderer />
       </Box>
-      
-
+        
     </Fragment>
   );
 };

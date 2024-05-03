@@ -12,6 +12,8 @@
     padding: 10px;
     color: #ff4500;
     transition: all 0.3s ease-in-out;
+    word-wrap: break-word;
+    word-break: break-word;
   }
   
   .userprofile:hover {

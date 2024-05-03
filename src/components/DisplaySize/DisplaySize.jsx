@@ -23,7 +23,13 @@ const DisplaySize = () => {
 
     return (
         <Fragment>
-            {windowSize.width} x {windowSize.height}
+            <div className="display-size">
+            <h3>DisplaySize:</h3>
+            <p className="para">Width X Height</p>
+            
+                {windowSize.width} x {windowSize.height}
+            
+            </div>
         </Fragment>
     );
 };

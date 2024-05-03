@@ -3,6 +3,7 @@ body{
     font-family: monospace;
     font-size: 20px;
     text-align: center;
+    width: 95%;
     height: 100%;
     margin: 20px;
     justify-content: center;
