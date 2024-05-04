@@ -8,13 +8,15 @@ import DisplaySize from "./components/DisplaySize/DisplaySize";
 import RegisterForm from "./components/Forms/RegisterForm";
 import UserDetailsRenderer from "./components/UserDetails/UserDetailsRenderer";
 import UseEffectHook from "./components/hooks/UseEffectHook";
-import Requests from "./components/hooks/RequestsMethods";
+import Requests from "./components/hooks/Requests";
+import CustomHook from "./components/CustomHooks/CustomHook";
 
 const App =()=>{
   
   return(
     
     <Fragment>
+      <CustomHook />
       <Requests />
       <DisplaySize /><br />
       <UseEffectHook />

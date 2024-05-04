@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect } from "react";
+import { Fragment, useState } from "react";
 
 
 const Requests = ()=> {
@@ -14,7 +14,7 @@ const Requests = ()=> {
             blogPostData.title && blogPostData.body ? (
                 fetch("https://jsonplaceholder.typicode.com/posts", {
                     method: "POST",
-                    body: JSON.stringify({title: blogPostData.title, body: blogPostData.body, userId: 1}),
+                    body: JSON.stringify({title: blogPostData.title, body: blogPostData.body, userId: (Math.random() * 10)}),
                     headers: {
                         "Content-Type": "application/json; charset=UTF-8"
                     }
