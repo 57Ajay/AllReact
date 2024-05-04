@@ -8,12 +8,14 @@ import DisplaySize from "./components/DisplaySize/DisplaySize";
 import RegisterForm from "./components/Forms/RegisterForm";
 import UserDetailsRenderer from "./components/UserDetails/UserDetailsRenderer";
 import UseEffectHook from "./components/hooks/UseEffectHook";
-
+import Requests from "./components/hooks/RequestsMethods";
 
 const App =()=>{
   
   return(
-    <Fragment> 
+    
+    <Fragment>
+      <Requests />
       <DisplaySize /><br />
       <UseEffectHook />
       <UserProfile Username="Ajay" age={21} login={true} />

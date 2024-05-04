@@ -11,11 +11,14 @@ const UseEffectHook = () => {
             .then((data) => setUsers(data));
     }, []);
     useEffect(()=>{
+        const controller = new AbortController();
         const fetchImg = async ()=>{
             try{
-            const response = await fetch("https://jsonplaceholder.typicode.com/photos");
+            const response = await fetch("https://jsonplaceholder.typicode.com/photos",
+                {signal: controller.signal}
+            );
             const data = await response.json();
-            
+            console.log(controller.signal);
             // sort the array randomly
             data.sort(() => Math.random() - 0.5);
             // fetching only 50 images Randomly
@@ -25,7 +28,13 @@ const UseEffectHook = () => {
             }
         };
         fetchImg();
+         // Abort the fetch request when the component is unmounted
+         return () => {
+            controller.abort("Component is unmounted");
+            console.log(controller.signal);
+        };
     }, []);
+
     return (
         <Box className="container">
             {users.map((user) => (
