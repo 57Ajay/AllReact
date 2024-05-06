@@ -11,6 +11,8 @@ import UseEffectHook from "./components/hooks/UseEffectHook";
 import Requests from "./components/hooks/Requests";
 import CustomHook from "./components/CustomHooks/CustomHook";
 import useDocumentClicks from "../src/utils/hooks/useDocumentClicks"
+import PostContainer from "./API/contexts/PostContainer";
+import userContext from "./API/contexts/UserContext";
 const App =()=>{
   useDocumentClicks()
   return(
@@ -38,7 +40,18 @@ const App =()=>{
       <Box className="user-details">
         <UserDetailsRenderer />
       </Box>
+      <br />
         
+        <userContext.Provider value={{
+          id: 1,
+          userName: "Ajay",
+          email: "57ajay@gmail.com",
+          displayName: "57Ajay"
+        }}>
+          <div>
+            <PostContainer />
+          </div>
+        </userContext.Provider>
     </Fragment>
   );
 };
