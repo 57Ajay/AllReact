@@ -1,16 +1,16 @@
-import PropTypes from "prop-types";
 import { useContext } from "react";
 import UserContext from "./UserContext";
+
 const PostContentButton=()=> {
-  const userContextData = useContext(UserContext);
+  const {id, setUserData} = useContext(UserContext);
   return (
     <div>
-        {userContextData.id}
+        {id}
+        <button onClick={()=>setUserData((currentState)=>({
+          ...currentState, displayName: "57uAjay", id: Math.random()
+        }))}>Click</button>
     </div>
   )
 }
 
-PostContentButton.propTypes = {
-    data: PropTypes.string.isRequired,
-}
 export default PostContentButton;

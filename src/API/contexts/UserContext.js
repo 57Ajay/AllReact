@@ -4,7 +4,8 @@ const UserContext = createContext({
     id: 0,
     userName: "",
     email: "",
-    displayName: ""
+    displayName: "",
+    setUserData: ()=>{},
 });
 
 export default UserContext;
