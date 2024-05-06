@@ -10,9 +10,9 @@ import UserDetailsRenderer from "./components/UserDetails/UserDetailsRenderer";
 import UseEffectHook from "./components/hooks/UseEffectHook";
 import Requests from "./components/hooks/Requests";
 import CustomHook from "./components/CustomHooks/CustomHook";
-
+import useDocumentClicks from "../src/utils/hooks/useDocumentClicks"
 const App =()=>{
-  
+  useDocumentClicks()
   return(
     
     <Fragment>
