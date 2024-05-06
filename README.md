@@ -74,6 +74,19 @@ The source code for this application is organized within the `src` directory. He
   - renders DisplaySize (width and height) with its customized styles.
   - **style file:** `DisplaySize.css`
 
+### `CustomHooks` folder
+- **File:** `CustomHook.jsx`
+- **Description:** This folder contains custom React hooks that encapsulate common behavior in the application.
+
+
+### `Hooks` folder
+- **File:** `Requests.jsx & UseEffectHook.jsx`
+- **Description:** This folder contains examples demonstrating the usage of React hooks.
+
+
+### `UserDetails` folder
+- **File:** `UserDetails.jsx & UserRenderer.jsx`
+- **Description:** This folder contains components responsible for displaying detailed user information.
 
 ### Additional Resources
 
