@@ -7,7 +7,7 @@ const PostContentButton=()=> {
     <div>
         {id}
         <button onClick={()=>setUserData((currentState)=>({
-          ...currentState, displayName: "57uAjay", id: Math.random()
+          ...currentState, displayName: "57upaAjay"+Math.random(), id: Math.random()
         }))}>Click</button>
     </div>
   )

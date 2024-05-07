@@ -7,7 +7,6 @@ import UserContext from "./UserContext";
     <div style={{color: "White"}}>
         <PostContent />
         {userContextData.displayName}
-
     </div>
   );
 };
