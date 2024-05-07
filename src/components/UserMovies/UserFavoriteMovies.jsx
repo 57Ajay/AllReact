@@ -29,7 +29,7 @@ const UserFavoriteMovies = ()=>{
 
     return(
         <div className={styles.userFavoriteMovies}>
-            <h1 className={styles.userFavoriteMovies__heading}>User Favourite Movies</h1>
+            <h1 className={styles.userFavoriteMovies__heading}>User Favorite Movies</h1>
             <ul className={styles.userFavoriteMovies__list}>
                 {favoriteMovies.map((movie) => (
                     <li className={styles.userFavoriteMovies__item} key={movie}>{movie}</li>

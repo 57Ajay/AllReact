@@ -12,8 +12,11 @@ import Requests from "./components/hooks/Requests";
 import CustomHook from "./components/CustomHooks/CustomHook";
 import useDocumentClicks from "../src/utils/hooks/useDocumentClicks"
 import PostContext from "./API/contexts/PostContext";
+import useFetchUser from "./components/CustomHooks/useFetchUser";
 const App =()=>{
   useDocumentClicks()
+  const {user, loading, error} = useFetchUser(1);
+  console.log(user, loading, error);
   return(
     
     <Fragment>
