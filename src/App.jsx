@@ -12,8 +12,10 @@ import CustomHook from "./components/CustomHooks/CustomHook";
 import useDocumentClicks from "../src/utils/hooks/useDocumentClicks"
 import PostContext from "./API/contexts/PostContext";
 import useFetchUser from "./components/CustomHooks/useFetchUser";
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import UseEffect from "./components/hooks/UseEffect";
+import UseMemo from "./components/hooks/Usememo";
+
 const App =()=>{
   useDocumentClicks()
   const {user, loading, error} = useFetchUser(1);
@@ -52,7 +54,8 @@ const App =()=>{
       <Outlet />
       <br />
       <PostContext />
-      < UseEffect />
+      <UseEffect />
+      <UseMemo />
     </Fragment>
   );
 };
