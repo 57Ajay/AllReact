@@ -8,14 +8,20 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    children: [{
-      path: 'user-details',
-      element:
-      <Box className="user-details">
-        <UserDetailsRenderer />
-      </Box>
-  }]
+  //   children: [{
+  //     path: 'user-details',
+  //     element:
+  //     <Box className="user-details">
+  //       <UserDetailsRenderer />
+  //     </Box>
+  // }] To render user-details separately
   },
+  { preventDefault: true,
+    path:'user-details',
+    element: <Box className="user-details">
+    <UserDetailsRenderer />
+  </Box>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

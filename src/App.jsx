@@ -12,7 +12,8 @@ import CustomHook from "./components/CustomHooks/CustomHook";
 import useDocumentClicks from "../src/utils/hooks/useDocumentClicks"
 import PostContext from "./API/contexts/PostContext";
 import useFetchUser from "./components/CustomHooks/useFetchUser";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
+import UseEffect from "./components/hooks/UseEffect";
 const App =()=>{
   useDocumentClicks()
   const {user, loading, error} = useFetchUser(1);
@@ -20,6 +21,14 @@ const App =()=>{
   return(
     
     <Fragment>
+      <div className="navbar">
+        <nav>
+          <ul>
+            <li><Link to={"/"}>Home</Link></li>
+            <li><Link to={"/user-details"}>user details</Link></li>
+          </ul>
+        </nav>
+      </div>
       <CustomHook />
       <Requests />
       <DisplaySize /><br />
@@ -43,6 +52,7 @@ const App =()=>{
       <Outlet />
       <br />
       <PostContext />
+      < UseEffect />
     </Fragment>
   );
 };
