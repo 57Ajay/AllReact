@@ -15,6 +15,7 @@ import useFetchUser from "./components/CustomHooks/useFetchUser";
 import { Outlet, Link } from "react-router-dom";
 import UseEffect from "./components/hooks/UseEffect";
 import UseMemo from "./components/hooks/Usememo";
+import UseRef from './components/hooks/UseRef';
 
 const App =()=>{
   useDocumentClicks()
@@ -56,6 +57,7 @@ const App =()=>{
       <PostContext />
       <UseEffect />
       <UseMemo />
+      <UseRef />
     </Fragment>
   );
 };
