@@ -16,6 +16,7 @@ import { Outlet, Link } from "react-router-dom";
 import UseEffect from "./components/hooks/UseEffect";
 import UseMemo from "./components/hooks/Usememo";
 import UseRef from './components/hooks/UseRef';
+import Assignment1 from "./components/assignments/Assignment1";
 
 const App =()=>{
   useDocumentClicks()
@@ -58,6 +59,7 @@ const App =()=>{
       <UseEffect />
       <UseMemo />
       <UseRef />
+      <Assignment1 />
     </Fragment>
   );
 };
