@@ -18,6 +18,7 @@ import UseMemo from "./components/hooks/UseMemo";
 import UseRef from './components/hooks/UseRef';
 import Assignment1 from "./components/assignments/Assignment1";
 import Assignment2 from "./components/assignments/Assignment2";
+import Assignment3 from "./components/assignments/Assignment3";
 
 const App =()=>{
   useDocumentClicks()
@@ -61,7 +62,8 @@ const App =()=>{
       <UseMemo /><br /><br />
       <UseRef />
       <Assignment1 /><br />
-      <Assignment2 />
+      <Assignment2 /><br />
+      <Assignment3 />
     </Fragment>
   );
 };
