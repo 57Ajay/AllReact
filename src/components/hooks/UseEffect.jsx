@@ -1,5 +1,5 @@
 import { Fragment, useState } from 'react'
-import useTodos from '../customHooks/useTodos.js';
+import useTodos from '../CustomHooks/useTodos';
  const UseEffect=()=> {
   const [id, setId] = useState(1);
   const todos = useTodos({id});

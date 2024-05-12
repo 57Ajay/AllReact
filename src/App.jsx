@@ -14,9 +14,10 @@ import PostContext from "./API/contexts/PostContext";
 import useFetchUser from "./components/CustomHooks/useFetchUser";
 import { Outlet, Link } from "react-router-dom";
 import UseEffect from "./components/hooks/UseEffect";
-import UseMemo from "./components/hooks/Usememo";
+import UseMemo from "./components/hooks/UseMemo";
 import UseRef from './components/hooks/UseRef';
 import Assignment1 from "./components/assignments/Assignment1";
+import Assignment2 from "./components/assignments/Assignment2";
 
 const App =()=>{
   useDocumentClicks()
@@ -57,9 +58,10 @@ const App =()=>{
       <br />
       <PostContext />
       <UseEffect />
-      <UseMemo />
+      <UseMemo /><br /><br />
       <UseRef />
-      <Assignment1 />
+      <Assignment1 /><br />
+      <Assignment2 />
     </Fragment>
   );
 };
